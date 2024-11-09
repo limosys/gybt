@@ -13,6 +13,7 @@
 #[derive(Debug, Clone)]
 pub struct Configuration {
     pub base_path: String,
+    pub authorization: String,
     pub user_agent: Option<String>,
     pub client: reqwest::Client,
     pub basic_auth: Option<BasicAuth>,
@@ -39,7 +40,8 @@ impl Configuration {
 impl Default for Configuration {
     fn default() -> Self {
         Configuration {
-            base_path: "http://localhost".to_owned(),
+            base_path: "https://ny.solana.dex.blxrbdn.com".to_owned(),
+            authorization: "MGRiNWNjNGUtYWFjYS00MThjLTgzYjctNmVkMDVmZDMzOThlOjg4Y2VlNzdkZjVmM2NhZWYwZmFjNzFkNmQ0OWVmOGY0".to_owned(),
             user_agent: Some("OpenAPI-Generator/1.6/rust".to_owned()),
             client: reqwest::Client::new(),
             basic_auth: None,
